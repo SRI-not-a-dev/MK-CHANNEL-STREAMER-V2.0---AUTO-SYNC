@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MK Channel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+<style>
+body{background:#0a0a0a;color:#fff;font-family:'Poppins';margin:0;padding:20px}
+h1{color:#00e676;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:15px;max-width:1200px;margin:auto}
+.card{background:#111;border:1px solid #222;border-radius:12px;overflow:hidden;cursor:pointer;transition:0.3s}
+.card:hover{transform:scale(1.03);border-color:#00e676}
+.card img{width:100%;height:300px;object-fit:cover;background:#000}
+.card h3{padding:12px;font-size:14px;margin:0}
+</style>
+</head>
+<body>
+<h1>🔥 MK CHANNEL STREAM</h1>
+<div class="grid">
+{% for v in videos %}
+  <div class="card" onclick="window.location='/watch/{{v[4]}}'">
+    <img src="https://via.placeholder.com/400x600/111/00e676?text=MK+TV">
+    <h3>{{v[2]}}</h3>
+  </div>
+{% endfor %}
+</div>
+</body>
+</html>
